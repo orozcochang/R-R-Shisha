@@ -34,3 +34,17 @@ class UserAccount(AbstractBaseUser, PermissionsMixin):
 
     def __str__(self) -> str:
         return self.email
+
+class Product(models.Model):
+    name = models.CharField(max_length=255)
+    price = models.IntegerField(max_length=10)
+    image_url = models.CharField(max_length=255)
+    description = models.CharField(max_length=255)
+
+class Cart(models.Model):
+    user = models.ForeignKey('UserAccount', on_delete=models.CASCADE)
+    products = models.ForeignKey('Product',on_delete=models.CASCADE)
+
+class Order(models.Model):
+    user = models.ForeignKey('UserAccount', on_delete=models.CASCADE)
+    products = models.ForeignKey('Product',on_delete=models.CASCADE)
