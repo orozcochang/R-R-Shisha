@@ -1,3 +1,6 @@
 # R-R-Shisha
-Ecommerce website for small business selling shisha mouthpieces.
-Tech-stack: JavaScript/React.js, Python/Django, PostgreSQL 
+Ecommerce website for small business selling shisha mouthpieces.  
+-Technical stack:  
+&emsp;-JavaScript/React.js  
+&emsp;-Python/Django  
+&emsp;-PostgreSQL 
