@@ -32,12 +32,12 @@ class UserAccount(AbstractBaseUser, PermissionsMixin):
     def get_short_name(self):
         return self.name
 
-    def __str__(self) -> str:
+    def __str__(self):
         return self.email
 
 class Product(models.Model):
     name = models.CharField(max_length=255)
-    price = models.IntegerField(max_length=10)
+    price = models.IntegerField()
     image_url = models.CharField(max_length=255)
     description = models.CharField(max_length=255)
 
