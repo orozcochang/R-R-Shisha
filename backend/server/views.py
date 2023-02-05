@@ -8,10 +8,6 @@ from django.core.serializers import serialize
 from django.core.serializers.json import DjangoJSONEncoder
 
 # Create your views here.
-def index(request):
-    index_file= open('static/index.html').read()
-    return HttpResponse(index_file)
-
-def pass_reset_index(request,uid,token):
+def index(request,**kwargs):
     index_file= open('static/index.html').read()
     return HttpResponse(index_file)
