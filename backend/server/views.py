@@ -11,3 +11,7 @@ from django.core.serializers.json import DjangoJSONEncoder
 def index(request):
     index_file= open('static/index.html').read()
     return HttpResponse(index_file)
+
+def pass_reset_index(request,uid,token):
+    index_file= open('static/index.html').read()
+    return HttpResponse(index_file)

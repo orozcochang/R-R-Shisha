@@ -5,6 +5,11 @@ from . import views
 
 urlpatterns = [
     path('', views.index),
+    path('login/', views.index),
+    path('signup/', views.index),
+    path('reset-password', views.index),
+    path('password/reset/confirm/<str:uid>/<slug:token>/', views.pass_reset_index),
+    path('activate/<str:uid>/<slug:token>', views.pass_reset_index),
     path('auth/', include('djoser.urls')),
     path('auth/', include('djoser.urls.jwt')),
 ]
